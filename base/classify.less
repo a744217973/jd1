@@ -1,0 +1,128 @@
+ @import "common.less";
+ html, body {
+     height: 100%;
+ }
+ /*头部模块样式*/
+
+ #header {
+     height: 45px;
+     background-color: rgba(255, 0, 0, 0);
+     display: flex;
+     position: fixed;
+     top: 0;
+     width: 100%;
+     >a {
+         display: block;
+         width: 40px;
+         height: 40px;
+         padding: 10px;
+         &.icon-back {
+             background-origin: content-box;
+             background-position: -20px 0px;
+             background-clip: content-box;
+         }
+         &.icon-menu {
+             background-position: -60px 0;
+         }
+     }
+     >form {
+         width: 100%;
+         position: relative;
+         >input {
+             flex: 1;
+             height: 30px;
+             width: 100%;
+             border-radius: 20px;
+             .m-top(5px);
+             padding-left: 30px;
+         }
+         .icon-search {
+             width: 20px;
+             height: 20px;
+             background-position: -60px -108px;
+             position: absolute;
+             top: 10px;
+             left: 5px;
+         }
+     }
+ }
+ /*左侧商品分类 样式*/
+
+ #main {
+     padding: 38px 0 50px 0;
+     display: flex;
+     height: 100%;
+     .left {
+         height: 100%;
+         width: 85px;
+         overflow: hidden;
+         .swiper-container {
+             width: 100%;
+             height: 100%;
+             .swiper-slide {
+                 height: auto;
+                 >ul {
+                     >li {
+                         background-color: #f8f8f8;
+                         >a {
+                             text-align: center;
+                             display: block;
+                             line-height: 46px;
+                             font-size: 14px;
+                         }
+                         &.active {
+                             background-color: #fff;
+                             >a {
+                                 color: #de181b;
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+     .right {
+         flex: 1;
+         background-color: #fff;
+         .swiper-container {
+             width: 100%;
+             height: 100%;
+         }
+         .swiper-slide {
+             height: auto;
+             #branchList {
+                 overflow: hidden;
+                 height: 100%;
+                 .jd-brand {
+                     .jd-category-style-1 {
+                         display: flex;
+                         width: 100%;
+                         flex-wrap: wrap;
+                         >li {
+                             width: 33.333333%;
+                             margin: 5px 0;
+                             text-align: center;
+                             >a {
+                                 display: block;
+                             }
+                             span {
+                                 display: block;
+                                 text-align: center;
+                             }
+                             img {
+                                 width: 70px;
+                                 height: 70px;
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }
+ /*脚注样式*/
+
+ #jd_footer {
+     position: fixed;
+     bottom: 0;
+ }
